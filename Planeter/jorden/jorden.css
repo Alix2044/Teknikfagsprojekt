@@ -1,3 +1,13 @@
-body{
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/220px-Cristiano_Ronaldo_2018.jpg");
+img {
+  display: block;
+  margin: 0 auto;
+  margin-top: auto;
+}
+
+body {
+  overflow-x: hidden;
+
+  scrollbar-width: none; /* Firefox */
+  background-image: url("/assets/sky.jfif");
+  background-size: cover;
 }

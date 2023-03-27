@@ -7,6 +7,8 @@
     border: 10px;
 border-radius: 10px;
 margin: 0 auto;
+
+
    
 
   
@@ -16,12 +18,15 @@ margin: 0 auto;
 
 body{
     background-color: black;
+
+
 }
 
 
 body{
     overflow-x: hidden;
 
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; 
+    
  }
 
