@@ -6,8 +6,7 @@
  //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
  //import { initializeApp } from 'firebase/app';
 
-
-//import { getDatabase } from "firebase/database";
+ //import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js';
 
 
  // Your web app's Firebase configuration
@@ -47,15 +46,19 @@ console.log("trhe")
       let user = auth.currentUser
 
       var database_ref = database.ref()
-
+    //  var sec = new TimeStamp(firebase.database.ServerValue.TIMESTAMP).toDate()
       let user_data = {
         email: user.email,
         password: password,
         full_name: full_name,
         created_at: firebase.database.ServerValue.TIMESTAMP,
         updated_at: firebase.database.ServerValue.TIMESTAMP,
+        last_login: firebase.database.ServerValue.TIMESTAMP,  
         
-      }
+
+        
+      } 
+      console.log(user_data)
 
       database_ref.child("users/" + user.uid).set(user_data)
 
