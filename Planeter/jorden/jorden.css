@@ -11,3 +11,8 @@ body {
   background-image: url("/assets/sky.jfif");
   background-size: cover;
 }
+
+#mars{
+  width: 80%;
+  height: 100%;
+}
