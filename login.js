@@ -3,8 +3,8 @@
  // TODO: Add SDKs for Firebase products that you want to use
  // https://firebase.google.com/docs/web/setup#available-libraries
 
- //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
- import { initializeApp } from 'firebase/app';
+ //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+ //import { initializeApp } from 'firebase/app';
 
 
 //import { getDatabase } from "firebase/database";
@@ -23,7 +23,7 @@
  };
 
  // Initialize Firebase
- const app = initializeApp(firebaseConfig);
+ const app = firebase.initializeApp(firebaseConfig);
 
  const auth = firebase.auth()
  const database = firebase.database()
