@@ -16,6 +16,12 @@ body {
   width: 80%;
   height: 100%;
 }
+#jorden{
+  width: 60%;
+  height: 100%;
+  margin-top: 20px;
+
+}
 
 #uranus,#saturn,#venus,#merkur{
   width: 83%;
@@ -23,7 +29,7 @@ body {
 
 
 }
-#merkur{
+#neptun{
   width: 83%;
   height: 100%;
 margin-top: 30px;
