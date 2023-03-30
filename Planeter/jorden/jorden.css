@@ -17,10 +17,14 @@ body {
   height: 100%;
 }
 #jorden{
-  width: 60%;
-  height: 100%;
-  margin-top: 20px;
+  width: 40%;
+  height: 80%;
+  margin-left: 500px;
 
+}
+#jordAstro{
+  width: 85%;
+  height:100%;
 }
 
 #uranus,#saturn,#venus,#merkur{

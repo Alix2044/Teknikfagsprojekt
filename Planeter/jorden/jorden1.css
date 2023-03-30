@@ -1,0 +1,43 @@
+body{
+    background-image: url("/assets/Astronaut\ blue.png");
+background-repeat: repeat-x;
+
+}
+img{
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    z-index:1;
+   position: relative;
+}
+#h1{
+    position: absolute;
+
+top: 150px;
+left: 33%;
+ transform: translate(20%, -90%);
+  z-index: 1;
+  
+    
+}
+#h2{
+    position: absolute;
+
+    top: 175px;
+    left: 33%;
+     transform: translate(20%, -90%);
+      z-index: 1;
+}
+#h3{
+    position: absolute;
+
+    top: 200px;
+    left: 32%;
+     transform: translate(20%, -90%);
+      z-index: 1;
+}
+#jordsil{
+    width: 80%;
+}
