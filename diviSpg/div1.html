@@ -359,11 +359,6 @@
       <h1>Resultat</h1>
       <input id="result" type="number" name="name" />
     </div>
-
-    <div>
-      <button id="submit">Næste</button>
-    </div>
-
     <script>
       const input1 = document.getElementById("input1");
       const input2 = document.getElementById("input2");
@@ -418,6 +413,7 @@
       const rest2 = document.getElementById("rest2");
       const rest3 = document.getElementById("rest3");
 
+
       rest2.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
@@ -448,11 +444,13 @@
         }
       });
 
-      // result
 
-      const result = document.getElementById("result");
+      // result 
 
-      result.addEventListener("input", function () {
+    const result = document.getElementById("result")
+
+
+    result.addEventListener("input",function () {
         const inputValue = parseInt(this.value);
 
         if (inputValue == "078" || inputValue == "78") {
@@ -467,23 +465,11 @@
         }
       });
 
-      var submitBtn = document.getElementById("submit");
+      
+      
+     
 
-      submitBtn.addEventListener("click", () => {
-        console.log(result.value);
-        if (
-          input1.value == "0" &&
-          input2.value == "7" &&
-          input3.value == "8" &&
-          rest2.value == "6" &&
-          rest3.value == "6" &&
-          (result.value == "078" || result.value == "78")
-        ) {
-          window.location.href = "./diviSpg/div1.html";
-        } else {
-          alert("ikke færdig endnu");
-        }
-      });
+
     </script>
   </body>
 </html>
