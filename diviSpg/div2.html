@@ -322,16 +322,16 @@
     </div>
 
     <div class="lollipop-box">
-      <div class="lollipop-circle">8</div>
+      <div class="lollipop-circle">6</div>
 
       <div class="lollipop-line"></div>
     </div>
 
     <div class="numbers-container">
       <div class="numbers-box">
-        <div class="number">6</div>
-        <div class="number">2</div>
+        <div class="number">5</div>
         <div class="number">4</div>
+        <div class="number">0</div>
       </div>
     </div>
 
@@ -352,12 +352,13 @@
 
     <div class="rest">
       <input id="rest2" type="text" />
-      <input id="rest3" type="text" />
-    </div>
 
+    </div>
+    
     <div>
       <button id="submit">Næste</button>
     </div>
+
 
     <div class="right-box">
       <h1>Resultat</h1>
@@ -385,7 +386,7 @@
       input2.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 7) {
+        if (inputValue === 9) {
           input2.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -400,7 +401,7 @@
       input3.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 8) {
+        if (inputValue === 0) {
           input3.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -415,34 +416,19 @@
       // Resterne
 
       const rest2 = document.getElementById("rest2");
-      const rest3 = document.getElementById("rest3");
+  
 
 
       rest2.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 6) {
+        if (inputValue === 5) {
           rest2.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
           rest2.style.backgroundColor = "white";
         } else {
           rest2.style.backgroundColor = "red";
-
-          console.log("kkkk");
-        }
-      });
-
-      rest3.addEventListener("change", function () {
-        const inputValue = parseInt(this.value);
-
-        if (inputValue === 6) {
-          rest3.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          rest3.style.backgroundColor = "white";
-        } else {
-          rest3.style.backgroundColor = "red";
 
           console.log("kkkk");
         }
@@ -457,7 +443,7 @@
     result.addEventListener("input",function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue == "078" || inputValue == "78") {
+        if (inputValue == "090" || inputValue == "90") {
           result.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -469,25 +455,24 @@
         }
       });
 
-      
       var submitBtn = document.getElementById("submit");
 
       submitBtn.addEventListener("click", () => {
         console.log(result.value);
-         if (
+        if (
           input1.value == "0" &&
-          input2.value == "7" &&
-          input3.value == "8" &&
-          rest2.value == "6" &&
-          rest2.value == "6" &&
-
-          (result.value == "078" || result.value == "78")
-      ) {
-        window.location.href = "./diviSpg/div1.html";
-     }  else {
-        alert("ikke færdig endnu");
-       }
-    });
+          input2.value == "9" &&
+          input3.value == "0" &&
+          rest2.value == "5" &&
+    
+          (result.value == "090" || result.value == "90")
+        ) {
+          window.location.href = "./diviSpg/div1.html";
+        } else {
+          alert("ikke færdig endnu");
+        }
+      });
+      
      
 
 
