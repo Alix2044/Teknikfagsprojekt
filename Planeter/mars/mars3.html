@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+          .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: lightblue;
+        border: 1px solid black;
+        font-size: 24px;
+        margin: 10px;
+        cursor: move;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+    </style>
+</head>
+<body style="background-image: url('/assets/Mars background.jpg');">
+    
+  
+   <div class="container">
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      0
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      1
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      2
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      3
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      4
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      5
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      6
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      7
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      8
+    </div>
+    <div
+      class="number"
+      draggable="true"
+      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+    >
+      9
+    </div>
+  </div>
+
+  <div class="lollipop-box">
+    <div class="lollipop"></div>
+  </div>
+</body>
+</html>
