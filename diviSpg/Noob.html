@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mars Math Game</title>
+	<style>
+		body {
+			background-color: #000;
+		}
+		canvas {
+			border: 2px solid white;
+			margin: 0 auto;
+			display: block;
+		}
+		h1 {
+			text-align: center;
+			font-family: Arial, sans-serif;
+			font-size: 30px;
+			margin-top: 50px;
+			color: white;
+			text-shadow: 2px 2px #FFD700;
+		}
+		#score {
+			text-align: center;
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			margin-top: 20px;
+			color: white;
+			text-shadow: 2px 2px #FFD700;
+		}
+		#mars {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 200px;
+			background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/pia22375-16.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#astronaut {
+			position: absolute;
+			top: 200px;
+			left: 50px;
+			width: 100px;
+			height: 150px;
+			background-image: url('https://www.pngkey.com/png/full/67-672745_astronaut-cartoon-cartoon-astronaut.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			animation: astronaut-float 2s ease-in-out infinite;
+			transform-origin: center bottom;
+		}
+		@keyframes astronaut-float {
+			0% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(-10px);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		
+        }p{
+            color: aquamarine;
+        }
+	</style>
+</head>
+<body onload="startGame()">
+	<div id="mars"></div>
+	<h1>Mars Math Game</h1>
+	<canvas id="gameCanvas" width="480" height="270"></canvas>
+	<div id="score">Score: 0</div>
+	<div id="astronaut">
+		<p>Hey there! Welcome to Mars.</p>
+		<p>Can you answer these math questions about division?</p>
+	</div>
+
+	<script>
+		// Game code goes here
+	</script>
+</body>
+</html>
+
