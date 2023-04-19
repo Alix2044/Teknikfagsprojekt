@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-
     <style>
-          .number {
+      .number {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -28,86 +27,347 @@
         align-items: center;
         margin: 20px;
       }
-    </style>
-</head>
-<body style="background-image: url('/assets/Mars background.jpg');">
-    
-  
-   <div class="container">
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      0
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      1
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      2
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      3
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      4
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      5
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      6
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      7
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      8
-    </div>
-    <div
-      class="number"
-      draggable="true"
-      ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
-    >
-      9
-    </div>
-  </div>
 
-  <div class="lollipop-box">
-    <div class="lollipop"></div>
-  </div>
-</body>
+      .lolbox {
+        border: 2px solid black;
+        width: 30%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10%;
+        margin-left: 18%;
+        margin-top: 9%;
+        z-index: 0;
+      }
+
+      .box {
+        width: 300px;
+        height: 200px;
+        position: relative;
+        border: 2px solid black;
+        margin: 0 auto;
+        z-index: 0;
+      }
+
+      .line {
+        position: absolute;
+        top: 50%;
+        left: 18.5%;
+        width: 30%;
+        height: 1px;
+        background-color: black;
+        z-index: 0;
+      }
+      .info {
+        position: absolute;
+        top: 37%;
+        left: 33%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        align-items: center;
+        z-index: 0;
+      }
+      .input-container input {
+        display: inline-block;
+        width: 5%;
+        height: 3%;
+        font-size: 24px;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        outline: none;
+        z-index: 1;
+      }
+      .input-container {
+        margin-left: 40%;
+        margin-top: 0%;
+        z-index: 1;
+      }
+
+      .right-box {
+        width: 30%;
+        height: 70%;
+        border-radius: 100px;
+        background-color: #e44d26;
+        position: absolute;
+        left: 58%;
+        top: 20%;
+
+        align-items: center;
+      }
+      .right-box h1 {
+        font-weight: bold;
+        margin-left: 33%;
+      }
+
+      .right-box input {
+        border-radius: 10px;
+        border-color: blue;
+        align-items: center;
+        margin-left: 7%;
+        margin-bottom: 10px;
+
+        width: 100%;
+        max-width: 300px;
+        height: 10%;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 50px;
+        padding: 10px;
+
+        font-size: large;
+        align-items: center;
+      }
+
+      .input-boxes {
+        margin-top: -15%;
+        margin-left: -20%;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      .inner-row2 {
+        margin-left: -8%;
+        margin-top: 2%;
+      }
+
+      .line2 {
+        position: absolute;
+        top: 70%;
+        left: 18.5%;
+        width: 30%;
+        height: 5px;
+        background-color: black;
+      }
+      .inner-row-result input {
+        display: inline-block;
+        width: 5%;
+        height: 3%;
+        font-size: 24px;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        outline: none;
+        z-index: 1;
+      }
+      .inner-row-result {
+        margin-left: 22%;
+        margin-top: 3%;
+
+        align-items: center;
+      }
+
+      .rest input {
+        display: inline-block;
+        width: 5%;
+        height: 3%;
+        font-size: 24px;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        outline: none;
+
+        z-index: 1;
+       
+      }
+      .rest {
+        margin-left: 31%;
+       
+        margin-top: -21%;
+        z-index: 1;
+        
+      }
+
+      
+    </style>
+  </head>
+  <body style="background-image: url('/assets/Mars background.jpg')">
+    <div class="container">
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        0
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        1
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        2
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        3
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        4
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        5
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        6
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        7
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        8
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        9
+      </div>
+    </div>
+
+    <div class="lolbox">
+      <div class="lollipop"></div>
+      <div class="line"></div>
+      <div class="info"><h1>81 &times 52</h1></div>
+
+  
+    </div>
+
+    <div class="input-row">
+      <div class="input-boxes">
+        <div class="input-container">
+          <input type="number" id="input1" />
+          <input type="number" id="input2" />
+          <input type="number" id="input3" />
+        </div>
+
+        <div class="input-row">
+          <div class="input-container">
+            <div class="inner-row2">
+              <input type="number" id="input4" />
+              <input type="number" id="input5" />
+              <input type="number" id="input6" />
+              <input type="number" name="" id="input7" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-row-result">
+      <div class="input-container-result">
+        <div class="inner-row-result">
+          <input type="number" id="result1"  />
+          <input type="number" id="restult2"/>
+          <input type="number" id="restult3"/>
+          <input type="number" name="" id="restult4" />
+        </div>
+      </div>
+    </div>
+
+    <div class="line2"></div>
+
+    <div class="right-box">
+      <h1>Resultat</h1>
+      <input id="result" type="number" name="name" />
+    </div>
+    <div class="rest">
+      <input type="number" name="" id="rest1" />
+    </div>
+  </body>
+
+  <script>
+      const input1 = document.getElementById("input1");
+      const input2 = document.getElementById("input2");
+      const input3 = document.getElementById("input3");
+      const input4 = document.getElementById("input4");
+      const input5 = document.getElementById("input5");
+      const input6 = document.getElementById("input6");
+      const input7 = document.getElementById("input7");
+
+      const restult1 = document.getElementById("result1");
+      const restult2 = document.getElementById("result2");
+      const restult3 = document.getElementById("result3");
+      const restult4 = document.getElementById("result4");
+
+      const rest1 = document.getElementById("rest1");
+
+
+      input1.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 1) {
+          input1.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else {
+          input1.style.backgroundColor = "red";
+          console.log(input1.value);
+          console.log("kkkk");
+        }
+      });
+      input2.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 3) {
+          input2.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else if (inputValue == "") {
+          input2.style.backgroundColor = "white";
+        } else {
+          input2.style.backgroundColor = "red";
+
+          console.log("kkkk");
+        }
+      });
+      
+
+      input3.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 7) {
+          input3.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else if (inputValue == "") {
+          input3.style.backgroundColor = "white";
+        } else {
+          input3.style.backgroundColor = "red";
+
+          console.log("kkkk");
+        }
+      });
+
+
+
+  </script>
 </html>
