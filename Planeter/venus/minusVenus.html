@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-image: url("/assets/venusback.png");
+        background-size: cover;
+
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: lightblue;
+        border: 1px solid black;
+        font-size: 24px;
+        margin: 10px;
+        cursor: move;
+      }
+
+      math {
+        display: block;
+        border: 6px solid black;
+		width: 70%;
+		
+        font-size: 24px;
+        line-height: 1;
+        margin-top: 10%;
+        margin-left: 1%;
+       padding: 1%;
+       
+
+       
+      }
+ 
+      mfrac {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: larger;
+
+  
+      }
+
+      mo  {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+        margin: 0 10px;
+
+      }
+
+      
+      input[type="number"] {
+        width: 50px;
+      }
+      .right-box {
+        width: 30%;
+        height: 70%;
+        border-radius: 100px;
+        background-color: #e44d26;
+        position: absolute;
+        
+        top: 20%;
+right:9%;
+        align-items: center;
+      }
+      .right-box h1 {
+        font-weight: bold;
+        margin-left: 33%;
+      }
+
+      .right-box input {
+        border-radius: 10px;
+        border-color: blue;
+        align-items: center;
+        margin-left: 7%;
+        margin-bottom: 10px;
+
+        width: 100%;
+        max-width: 300px;
+        height: 10%;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 50px;
+        padding: 10px;
+
+        font-size: large;
+        align-items: center;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        0
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        1
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        2
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        3
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        4
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        5
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        6
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        7
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        8
+      </div>
+      <div
+        class="number"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain', event.target.innerText)"
+      >
+        9
+      </div>
+    </div>
+
+    <div class=".mat">
+
+   
+    <math>
+        
+      <mfrac>
+        <mn>1</mn>
+        &#9135;
+        <mn>5</mn>
+      </mfrac>
+      <mo>&minus;</mo>
+      <mfrac>
+        <mn>4</mn>
+        &#9135;
+        <mn>7</mn>
+      </mfrac>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+            <mn><input type="number" name="" id=""></mn>
+            <mo>&#xd7;</mo>
+            <mn><input type="number" name="" id=""></mn>
+            
+          </mrow>
+          &#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;
+
+          <mrow>
+            <mn><input type="number" name="" id=""></mn>
+            <mo>&#xd7;</mo>
+            <mn><input type="number" name="" id=""></mn>
+            
+          </mrow>
+ 
+      </mfrac>
+      <mo>&minus;</mo>
+      <mfrac>
+  
+        <mrow>
+            <mn><input type="number" name="" id=""></mn>
+            <mo>&times;</mo>
+            <mn><input type="number" name="" id=""></mn>
+            
+          </mrow>
+          &#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;
+
+          <mrow>
+            <mn><input type="number" name="" id=""></mn>
+            <mo>&times;</mo>
+            <mn><input type="number" name="" id=""></mn>
+            
+          </mrow>
+      </mfrac>
+<mo>=</mo>
+
+<mfrac>
+    <mn><input type="number" name="" id=""><hr></mn>
+    <mn><input type="number" name="" id=""></mn>
+
+</mfrac>
+<mo>&minus;</mo>
+<mfrac>
+    <mn><input type="number" name="" id=""><hr></mn>
+    <mn><input type="number" name="" id=""></mn>
+
+</mfrac>
+   
+     
+    </math>
+</div>
+<div class="right-box">
+    <h1>Resultat</h1>
+    <input id="result" type="number" name="name" />
+  </div>
+  </body>
+</html>
