@@ -60,32 +60,6 @@ function bokse(){
    rect(infoBoksX, infoBoksY, infoBoksWidth, infoBoksHeight, cornerR);
    rect(titleBoksX, titleBoksY, titleBoksWidth, titleBoksHeight, cornerR);
 
-   let næsteKnapX = width - (width / 6);
-   let næsteKnapY = titleBoksY;
-   let næsteKnapWidth = width / 10;
-   let næsteKnapHeight = titleBoksHeight / 1.5;
-   let forrigeKnapX = width / 6;
-
-   rect(næsteKnapX, næsteKnapY, næsteKnapWidth, næsteKnapHeight, cornerR);
-   rect(forrigeKnapX, næsteKnapY, næsteKnapWidth, næsteKnapHeight, cornerR);
-
-   fontsize = næsteKnapHeight / 2.3;
-   næste.style('font-size', fontsize + 'px')
-   næste.style('text-align: center');
-   næste.style('vertical-align: center');
- 
-   næste.size(næsteKnapWidth, næsteKnapHeight);
-   næste.position(næsteKnapX - næsteKnapWidth / 2.3, næsteKnapY - (næsteKnapHeight - fontsize) / 4);
- 
-   forrige.style('font-size', fontsize + 'px')
-   forrige.style('text-align: center');
-   forrige.style('vertical-align: center');
- 
-   forrige.size(næsteKnapWidth, næsteKnapHeight);
-   forrige.position(forrigeKnapX - næsteKnapWidth / 2.3, næsteKnapY - (næsteKnapHeight - fontsize) / 4);
- 
-
-
    textSize(titleBoksHeight - titleBoksHeight / 4);
    fill(0);
    strokeWeight(4);
