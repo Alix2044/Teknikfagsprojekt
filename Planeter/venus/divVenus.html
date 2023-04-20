@@ -254,7 +254,7 @@ right:9%;
 </div>
 <div class="right-box">
     <h1>Resultat</h1>
-    <input id="result" type="number" name="name" />
+    <input id="resultX" type="number" name="name" />
   </div>
 
   <a href="/Formelsamling/Formelsamling_forside.html"><button id="formelsamling">Formelsamling</button></a> 
@@ -262,6 +262,106 @@ right:9%;
   </body>
 
   <script>
+     const input1 = document.getElementById("input1");
+      const input2 = document.getElementById("input2");
+      const input3 = document.getElementById("input3");
+      const input4 = document.getElementById("input4");
+
+      // resultat
+
+     const top1 = document.getElementById("result1");
+      const bund1 = document.getElementById("result2");
+
+
+      // kan ændres til changes
+      input1.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 1) {
+          input1.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else {
+          input1.style.backgroundColor = "red";
+          console.log(input1.value);
+          console.log("kkkk");
+        }
+      });
+
+      input2.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 7) {
+          input2.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else if (inputValue == "") {
+          input2.style.backgroundColor = "white";
+        } else {
+          input2.style.backgroundColor = "red";
+
+          console.log("kkkk");
+        }
+      });
+
+      input3.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 8) {
+          input3.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else if (inputValue == "") {
+          input3.style.backgroundColor = "white";
+        } else {
+          input3.style.backgroundColor = "red";
+
+          console.log("kkkk");
+        }
+      });
+
+      input4.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 8) {
+          input4.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else if (inputValue == "") {
+          input3.style.backgroundColor = "white";
+        } else {
+          input4.style.backgroundColor = "red";
+
+          console.log("kkkk");
+        }
+      });
+
+      top1.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 8) {
+          input4.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else if (inputValue == "") {
+          input3.style.backgroundColor = "white";
+        } else {
+          input4.style.backgroundColor = "red";
+
+          console.log("kkkk");
+        }
+      });
+
+      bund1.addEventListener("input", function () {
+        const inputValue = parseInt(this.value);
+
+        if (inputValue === 8) {
+          input4.style.backgroundColor = "green";
+          console.log("hhhh");
+        } else if (inputValue == "") {  
+          input3.style.backgroundColor = "white";
+        } else {
+          input4.style.backgroundColor = "red";
+
+          console.log("kkkk");
+        }
+      });
+
 
 
   </script>
