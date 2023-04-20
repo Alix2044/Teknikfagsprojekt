@@ -39,8 +39,6 @@ function bokse(){
   stroke(32, 56, 100);
   strokeWeight(2);
   fill(240)
-
-
   //Bokse på skærmen
   //for loop for de 4 øverste
   for(let i = 0; i<=3; i++){
