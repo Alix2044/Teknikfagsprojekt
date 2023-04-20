@@ -39,10 +39,8 @@ function bokse(){
   stroke(32, 56, 100);
   strokeWeight(2);
   fill(240)
-
-  rect(width / 2, (boksY - (boksHeight / 2)) / 2, width / 2, boksHeight - (boksHeight / 4), cornerR)
-
-  //Bokse på skærmen, for loop for de 4 øverste
+  //Bokse på skærmen
+  //for loop for de 4 øverste
   for(let i = 0; i<=3; i++){
     rect(boksWidth / 2 + (boksWidth * i), boksY, boksActualWidth, boksHeight, cornerR);
   }
@@ -50,6 +48,9 @@ function bokse(){
   for(let i = 0; i<=3; i++){
     rect(boksWidth / 2 + (boksWidth * i), boksY + boksHeight * 1.5, boksWidth - width / 18, boksHeight, cornerR);
   }
+
+  //titleboks + tekst i title
+  rect(width / 2, (boksY - (boksHeight / 2)) / 2, width / 2, boksHeight - (boksHeight / 4), cornerR)
 
   textAlign(CENTER, CENTER);
   textSize(boksHeight / 3)
