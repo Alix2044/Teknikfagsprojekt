@@ -13,14 +13,14 @@ let hierarki
 
 function setup() {
   createCanvas(windowWidth - 10, windowHeight - 20);
-  plus = createDiv("<a href='../Formelsamling/Sider/plus_minus.html'>Plus og Minus</a>");
-  gange = createDiv("<a href='../Formelsamling/Sider/gange.html'>Gange</a>");
-  divi = createDiv("<a href='../Formelsamling/Sider/divi.html'>Division</a>");
-  brøk = createDiv("<a href='../Formelsamling/Sider/brøk.html'>Brøker</a>");
-  deci = createDiv("<a href='../Formelsamling/Sider/deci.html'>Decimaltal</a>");
-  procent = createDiv("<a href='../Formelsamling/Sider/procent.html'>Procent</a>");
-  ligning = createDiv("<a href='../Formelsamling/Sider/ligning.html'>Ligninger</a>");
-  hierarki = createDiv("<a href='../Formelsamling/Sider/hierarki.html'>Hierarki</a>");
+  plus = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/plus_minus.html'>Plus og Minus</a>");
+  gange = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/gange.html'>Gange</a>");
+  divi = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/divi.html'>Division</a>");
+  brøk = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/brøk.html'>Brøker</a>");
+  deci = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/deci.html'>Decimaltal</a>");
+  procent = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/procent.html'>Procent</a>");
+  ligning = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/ligning.html'>Ligninger</a>");
+  hierarki = createDiv("<a style='text-decoration:none' href='../Formelsamling/Sider/hierarki.html'>Hierarki</a>");
 }
 
 function draw() {
