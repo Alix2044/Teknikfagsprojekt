@@ -172,7 +172,7 @@
        
       }
       .rest {
-        margin-left: 31%;
+        margin-left: 32%;
        
         margin-top: -25%;
         z-index: 1;
@@ -259,7 +259,7 @@
     <div class="lolbox">
       <div class="lollipop"></div>
       <div class="line"></div>
-      <div class="info"><h1>49 &times 85</h1></div>
+      <div class="info"><h1>67 &times 17</h1></div>
 
   
     </div>
@@ -308,9 +308,8 @@
     <div class="rest">
       <input type="number" name="" id="rest1" />
       <input type="number" name="" id="rest2" />
-
     </div>
-
+  </div>
   </body>
 
   <script>
@@ -336,7 +335,7 @@
       input1.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 7) {
+        if (inputValue === 1) {
           input1.style.backgroundColor = "green";
           console.log("hhhh");
         } else {
@@ -348,7 +347,7 @@
       input2.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 6) {
+        if (inputValue === 1) {
           input2.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -362,7 +361,7 @@
       input3.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 5) {
+        if (inputValue === 9) {
           input3.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -378,7 +377,7 @@
       input4.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 3) {
+        if (inputValue === 1) {
           input4.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -393,7 +392,7 @@
       input5.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 4) {
+        if (inputValue === 0) {
           input5.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -408,7 +407,7 @@
       input6.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 0) {
+        if (inputValue === 2) {
           input6.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -438,7 +437,7 @@
       result1.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 4) {
+        if (inputValue === 1) {
           result1.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -469,7 +468,7 @@
       result3.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 6) {
+        if (inputValue === 3) {
           result3.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -485,7 +484,7 @@
       result4.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 5) {
+        if (inputValue === 9) {
           result4.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -501,7 +500,7 @@
       rest1.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 2) {
+        if (inputValue === 4) {
           rest1.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -533,7 +532,7 @@
       result.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
-        if (inputValue === 4165) {
+        if (inputValue === 1139) {
           result.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -550,22 +549,22 @@
 submitBtn.addEventListener("click", () => {
   console.log(result.value);
   if (
-    input1.value == "7" &&
-    input2.value == "6" &&
-    input3.value == "5" &&
-    input4.value == "3" &&
-    input5.value == "4" &&
-    input6.value == "0" &&
+    input1.value == "1" &&
+    input2.value == "1" &&
+    input3.value == "9" &&
+    input4.value == "1" &&
+    input5.value == "0" &&
+    input6.value == "2" &&
     input7.value == "0" &&
 
-    result1.value == "4" &&
+    result1.value == "1" &&
     result2.value == "1" &&
-    result3.value == "6" &&
-    result4.value == "5" &&
+    result3.value == "3" &&
+    result4.value == "9" &&
     
-    (result.value == "4165")
+    (result.value == "1139")
   ) {
-    window.location.href = "/mars1.html";
+    window.location.href = "/marsSlut.html";
   } else {
     alert("ikke færdig endnu");
   }
@@ -573,3 +572,4 @@ submitBtn.addEventListener("click", () => {
 
   </script>
 </html>
+
