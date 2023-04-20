@@ -71,6 +71,26 @@ console.log("trhe")
 
  }
 
+ // Get a reference to the "users" node in the database
+const usersRef = database.ref("users");
+
+// Attach an event listener to the "value" event to listen for changes in the data
+usersRef.on("value", function (snapshot) {
+  // Get the data from the snapshot
+  const data = snapshot.val();
+
+  // Loop through each user in the data
+  for (const userId in data) {
+    const user = data[userId];
+
+    // Log the user data to the console
+    console.log(user.email, user.full_name, user.created_at);
+  }
+});
+
+
+
+
  function validate_email(email){
 
     let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
