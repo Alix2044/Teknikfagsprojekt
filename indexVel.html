@@ -20,8 +20,8 @@
         right: 0;
         padding: 10px;
       }
-.regi-button{
-  background-color: #4caf50;
+      .regi-button {
+        background-color: #4caf50;
         color: white;
         border: none;
         border-radius: 4px;
@@ -31,7 +31,7 @@
         display: inline-block;
         font-size: 16px;
         cursor: pointer;
-}
+      }
       .login-button {
         background-color: #0c00f6;
         color: white;
@@ -44,6 +44,32 @@
         font-size: 16px;
         cursor: pointer;
       }
+      .speech-bubble {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+  margin: 20px;
+  left:48%;
+  top: 65%;
+}
+
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #ffffff transparent transparent;
+  right: 100%;
+  top: 15px;
+}
+
+
     </style>
   </head>
   <body>
@@ -114,13 +140,25 @@
       </map>
     </div>
     <div class="login-button-container">
-      <a href="/login.html">
-        <button class="login-button">Logind</button>
-        <button class="regi-button">Registrer</button>
-      </a>
+      
+        <button class="login-button" id="name"></button>
+      
     </div>
-  
 
-    <script src="script.js"></script>
+    <div class="speech-bubble">
+        <strong>Velkommen <span id="name1"></span> </strong> 
+        <p><strong> Klik på jorden</strong> </p>
+        
+
+      </div>
+
+    <script>
+      const userData = JSON.parse(localStorage.getItem("full_name"));
+
+        document.getElementById("name").innerHTML = userData
+        document.getElementById("name1").innerHTML = userData
+
+      console.log(userData)
+    </script>
   </body>
 </html>

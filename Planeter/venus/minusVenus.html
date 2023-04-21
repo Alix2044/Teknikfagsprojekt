@@ -38,14 +38,14 @@
       math {
         display: block;
         border: 6px solid black;
-		width: 70%;
+		width: max-content;
 		
         font-size: 24px;
         line-height: 1;
         margin-top: 10%;
         margin-left: 1%;
        padding: 1%;
-       
+       margin: 10% auto;
 
        
       }
@@ -188,15 +188,15 @@ right:9%;
     <math>
         
       <mfrac>
-        <mn>2</mn>
+        <mn>6</mn>
         &#9135;
-        <mn>5</mn>
+        <mn>7</mn>
       </mfrac>
       <mo>&minus;</mo>
       <mfrac>
-        <mn>9</mn>
+        <mn>2</mn>
         &#9135;
-        <mn>8</mn>
+        <mn>5</mn>
       </mfrac>
       <mo>=</mo>
       <mfrac>
@@ -248,13 +248,16 @@ right:9%;
 
 </mfrac>
    
+<mo>&equals;  </mo>
+<mfrac>
+    <mn><input type="number" name="" id="result1"><hr></mn>
+    <mn><input type="number" name="" id="result2"></mn>
+
+</mfrac>
      
     </math>
 </div>
-<div class="right-box">
-    <h1>Resultat</h1>
-    <input id="result" type="number" name="name" />
-  </div>
+
     <button id="submit">Næste</button>
   </div>
   </body>
@@ -269,13 +272,15 @@ right:9%;
     const input7 = document.getElementById("input7");
     const input8 = document.getElementById("input8");
 
-    const resultat = document.getElementById("resultat");
+   const result1= document.getElementById("result1");
+   const result2= document.getElementById("result2");
+
 
      // kan ændres til changes
      input1.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 2) {
+      if (inputValue === 6) {
         input1.style.backgroundColor = "green";
         console.log("hhhh");
       } else {
@@ -303,7 +308,7 @@ right:9%;
     input3.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 8) {
+      if (inputValue === 7) {
         input3.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
@@ -318,7 +323,7 @@ right:9%;
     input4.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 8) {
+      if (inputValue === 5) {
         input4.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
@@ -332,7 +337,7 @@ right:9%;
     input5.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 9) {
+      if (inputValue === 2) {
         input5.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
@@ -347,7 +352,7 @@ right:9%;
     input6.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 8) {
+      if (inputValue === 7) {
         input6.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
@@ -377,7 +382,7 @@ right:9%;
     input8.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 5) {
+      if (inputValue === 7) {
         input8.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
@@ -392,7 +397,7 @@ right:9%;
     top1.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 16) {
+      if (inputValue === 30) {
         top1.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
@@ -407,7 +412,7 @@ right:9%;
     bund1.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 40) {
+      if (inputValue === 35) {
         bund1.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {  
@@ -422,7 +427,7 @@ right:9%;
     top2.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 45) {
+      if (inputValue === 14) {
         top2.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
@@ -437,7 +442,7 @@ right:9%;
     bund2.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 40) {
+      if (inputValue === 35) {
         bund2.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {  
@@ -451,16 +456,31 @@ right:9%;
 
     var submitBtn = document.getElementById("submit");
 
-    result.addEventListener("input", function () {
+    result1.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 56) {
-        result.style.backgroundColor = "green";
+      if (inputValue === 16) {
+        result1.style.backgroundColor = "green";
         console.log("hhhh");
       } else if (inputValue == "") {
-        result.style.backgroundColor = "white";
+        result1.style.backgroundColor = "white";
       } else {
-        result.style.backgroundColor = "red";
+        result1.style.backgroundColor = "red";
+
+        console.log("kkkk");
+      }
+    });
+
+    result2.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
+
+      if (inputValue === 35) {
+        result2.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        result2.style.backgroundColor = "white";
+      } else {
+        result2.style.backgroundColor = "red";
 
         console.log("kkkk");
       }
@@ -470,23 +490,29 @@ right:9%;
     var submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", () => {
-console.log(result.value);
-if (
-  input1.value == "2" &&
-  input2.value == "5" &&
-  input3.value == "8" &&
-  input4.value == "8" &&
-  input5.value == "9" &&
-  input6.value == "8" &&
-  input7.value == "5" &&
-  input8.value == "5" &&
 
-  top1.value == "29" &&
-  bund1.value == "40" &&
+if (
+  input1.value == "6" &&
+  input2.value == "5" &&
+  input3.value == "7" &&
+  input4.value == "5" &&
+  input5.value == "2" &&
+  input6.value == "7" &&
+  input7.value == "5" &&
+  input8.value == "7" &&
+
+  top1.value == "30" &&
+  bund1.value == "35" &&
+  top2.value == "14" &&
+  bund2.value == "35" &&
   
-  (result.value == "29")
+  result1.value == "16" &&
+  result2.value == "35" 
+ 
 ) {
-  result.value = 29/40
+window.location.href = "/Planeter/venus/divVenus.html"
+
+
 } else {
   alert("ikke færdig endnu");
 }

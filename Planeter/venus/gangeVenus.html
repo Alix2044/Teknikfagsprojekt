@@ -38,7 +38,7 @@
       math {
         display: block;
         border: 6px solid black;
-		width: 70%;
+		width:max-content;
 		
         font-size: 24px;
         line-height: 1;
@@ -46,6 +46,7 @@
         margin-left: 1%;
        padding: 1%;
        
+       margin: 10% auto;
 
        
       }
@@ -229,10 +230,7 @@ right:9%;
      
     </math>
 </div>
-<div class="right-box">
-    <h1>Resultat</h1>
-    <input id="result" type="number" name="name" />
-  </div>
+
   <div>
     <button id="submit">Næste</button>
   </div>
@@ -247,7 +245,7 @@ right:9%;
       const restult1 = document.getElementById("result1");
       const restult2 = document.getElementById("result2");
 
-      const resultat = document.getElementById("resultat");
+     
 
        // kan ændres til changes
        input1.addEventListener("input", function () {
@@ -340,26 +338,12 @@ right:9%;
 
       var submitBtn = document.getElementById("submit");
 
-      result.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
-
-        if (inputValue === 56) {
-          result.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          result.style.backgroundColor = "white";
-        } else {
-          result.style.backgroundColor = "red";
-
-          console.log("kkkk");
-        }
-      });
-
+  
 
       var submitBtn = document.getElementById("submit");
 
 submitBtn.addEventListener("click", () => {
-  console.log(result.value);
+
   if (
     input1.value == "4" &&
     input2.value == "3" &&
@@ -367,12 +351,12 @@ submitBtn.addEventListener("click", () => {
     input4.value == "8" &&
 
 
-    result1.value == "12" &&
-    result2.value == "56" &&
+    top1.value == "12" &&
+    bund1.value == "56" 
     
-    (result.value == "12/56")
+  
   ) {
-    result.value = 12/56
+    window.location.href = "/Planeter/venus/minusVenus.html"
   } else {
     alert("ikke færdig endnu");
   }

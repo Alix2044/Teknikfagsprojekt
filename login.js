@@ -28,7 +28,7 @@
  const database = firebase.database()
 
  function register(){
-console.log("trhe")
+
     email = document.getElementById("email").value 
     password = document.getElementById("password").value
     full_name = document.getElementById("full_name").value
@@ -79,6 +79,9 @@ usersRef.on("value", function (snapshot) {
   // Get the data from the snapshot
   const data = snapshot.val();
 
+
+
+
   // Loop through each user in the data
   for (const userId in data) {
     const user = data[userId];
@@ -88,6 +91,24 @@ usersRef.on("value", function (snapshot) {
   }
 });
 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in, get the UID
+    var uid = user.uid;
+    // Retrieve the user's information from the Realtime Database using the UID
+    firebase.database().ref('users/' + uid).once('value').then(function(snapshot) {
+      var userInformation = snapshot.val();
+      // Do something with the user's information
+      console.log(userInformation);
+      localStorage.setItem('full_name', JSON.stringify(userInformation.full_name));
+
+      
+
+    });
+  } else {
+    // User is signed out
+  }
+});
 
 
 
