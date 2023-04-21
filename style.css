@@ -1,27 +1,20 @@
-#forside{
-    display: block;
-    width: 98%;
-    height: 600px;
-    border-color: red;
-   align-items: center;
-    border: 10px;
-border-radius: 10px;
-margin: 0 auto;
-
-
+#forside {
+  display: block;
+  width: 98%;
+  height: 600px;
+  border-color: red;
+  align-items: center;
+  border: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
-body{
-    background-color: black;
-
-
+body {
+  background-color: black;
 }
 
+body {
+  overflow-x: hidden;
 
-body{
-    overflow-x: hidden;
-
-    scrollbar-width: none; 
-    
- }
-
+  scrollbar-width: none;
+}

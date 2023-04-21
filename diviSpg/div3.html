@@ -3,6 +3,18 @@
   <head>
     <title>Numbers</title>
     <style>
+      button#formelsamling {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        border: 2px solid #0077be;
+        background-color: #0077be;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
       body {
         background-color: skyblue;
       }
@@ -103,10 +115,10 @@
       }
 
       .numbers-box > div {
-        background-color: transparent; 
-        border: none; 
-        margin: 0; 
-        padding: 0; 
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
       }
 
       .input-container {
@@ -358,14 +370,15 @@
     <div>
       <button id="submit">Næste</button>
     </div>
+    <a href="/Formelsamling/Formelsamling_forside.html"
+      ><button id="formelsamling">Formelsamling</button></a
+    >
 
     <div class="right-box">
       <h1>Resultat</h1>
       <input id="result" type="number" name="name" />
     </div>
     <script>
-    
-    
       const input1 = document.getElementById("input1");
       const input2 = document.getElementById("input2");
       const input3 = document.getElementById("input3");
@@ -419,7 +432,6 @@
       const rest2 = document.getElementById("rest2");
       const rest3 = document.getElementById("rest3");
 
-
       rest2.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
@@ -437,7 +449,7 @@
 
       rest3.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
-      if (inputValue === 4) {
+        if (inputValue === 4) {
           rest3.style.backgroundColor = "green";
           console.log("hhhh");
         } else if (inputValue == "") {
@@ -449,13 +461,11 @@
         }
       });
 
+      // result
 
-      // result 
+      const result = document.getElementById("result");
 
-    const result = document.getElementById("result")
-
-
-    result.addEventListener("input",function () {
+      result.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
         if (inputValue == "137") {
@@ -472,26 +482,21 @@
 
       var submitBtn = document.getElementById("submit");
 
-submitBtn.addEventListener("click", () => {
-  console.log(result.value);
-  if (
-    input1.value == "1" &&
-    input2.value == "3" &&
-    input3.value == "7" &&
-    rest2.value == "2" &&
-    rest3.value == "4" &&
-    
-    (result.value == "137")
-  ) {
-    window.location.href = "/diviSpg/slut.html";
-  } else {
-    alert("ikke færdig endnu");
-  }
-});
-      
-     
-
-
+      submitBtn.addEventListener("click", () => {
+        console.log(result.value);
+        if (
+          input1.value == "1" &&
+          input2.value == "3" &&
+          input3.value == "7" &&
+          rest2.value == "2" &&
+          rest3.value == "4" &&
+          result.value == "137"
+        ) {
+          window.location.href = "/diviSpg/slut.html";
+        } else {
+          alert("ikke færdig endnu");
+        }
+      });
     </script>
   </body>
 </html>

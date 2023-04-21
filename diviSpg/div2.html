@@ -3,6 +3,18 @@
   <head>
     <title>Numbers</title>
     <style>
+      button#formelsamling {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        border: 2px solid #0077be;
+        background-color: #0077be;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
       body {
         background-color: skyblue;
       }
@@ -352,13 +364,14 @@
 
     <div class="rest">
       <input id="rest2" type="text" />
-
     </div>
-    
+
     <div>
       <button id="submit">Næste</button>
     </div>
-
+    <a href="/Formelsamling/Formelsamling_forside.html"
+      ><button id="formelsamling">Formelsamling</button></a
+    >
 
     <div class="right-box">
       <h1>Resultat</h1>
@@ -416,8 +429,6 @@
       // Resterne
 
       const rest2 = document.getElementById("rest2");
-  
-
 
       rest2.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
@@ -434,13 +445,11 @@
         }
       });
 
+      // result
 
-      // result 
+      const result = document.getElementById("result");
 
-    const result = document.getElementById("result")
-
-
-    result.addEventListener("input",function () {
+      result.addEventListener("input", function () {
         const inputValue = parseInt(this.value);
 
         if (inputValue == "090" || inputValue == "90") {
@@ -464,7 +473,6 @@
           input2.value == "9" &&
           input3.value == "0" &&
           rest2.value == "5" &&
-    
           (result.value == "090" || result.value == "90")
         ) {
           window.location.href = "/diviSpg/div3.html";
@@ -472,11 +480,6 @@
           alert("ikke færdig endnu");
         }
       });
-      
-        
-
-
     </script>
   </body>
 </html>
-  
