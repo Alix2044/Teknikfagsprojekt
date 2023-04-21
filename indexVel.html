@@ -45,31 +45,29 @@
         cursor: pointer;
       }
       .speech-bubble {
-  position: absolute;
-  top: 50px;
-  left: 100px;
-  background-color: #ffffff;
-  border: 1px solid #999999;
-  border-radius: 10px;
-  padding: 10px;
-  width: 200px;
-  height: auto;
-  margin: 20px;
-  left:48%;
-  top: 65%;
-}
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        background-color: #ffffff;
+        border: 1px solid #999999;
+        border-radius: 10px;
+        padding: 10px;
+        width: 200px;
+        height: auto;
+        margin: 20px;
+        left: 48%;
+        top: 65%;
+      }
 
-.speech-bubble::before {
-  content: "";
-  position: absolute;
-  border-style: solid;
-  border-width: 10px 15px 10px 0;
-  border-color: transparent #ffffff transparent transparent;
-  right: 100%;
-  top: 15px;
-}
-
-
+      .speech-bubble::before {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #ffffff transparent transparent;
+        right: 100%;
+        top: 15px;
+      }
     </style>
   </head>
   <body>
@@ -140,25 +138,21 @@
       </map>
     </div>
     <div class="login-button-container">
-      
-        <button class="login-button" id="name"></button>
-      
+      <button class="login-button" id="name"></button>
     </div>
 
     <div class="speech-bubble">
-        <strong>Velkommen <span id="name1"></span> </strong> 
-        <p><strong> Klik på jorden</strong> </p>
-        
-
-      </div>
+      <strong>Velkommen <span id="name1"></span> </strong>
+      <p><strong> Klik på jorden</strong></p>
+    </div>
 
     <script>
       const userData = JSON.parse(localStorage.getItem("full_name"));
 
-        document.getElementById("name").innerHTML = userData
-        document.getElementById("name1").innerHTML = userData
+      document.getElementById("name").innerHTML = userData;
+      document.getElementById("name1").innerHTML = userData;
 
-      console.log(userData)
+      console.log(userData);
     </script>
   </body>
 </html>

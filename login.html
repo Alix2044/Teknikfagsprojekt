@@ -4,72 +4,89 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/login.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/login.css" />
     <title>Velkommen til Troy's Adventure</title>
     <link rel="icon" type="image/png" href="/assets/Venus1.PNG" />
-
   </head>
   <body>
-   <div id="conetent_container">
-    <div id="form_container">
-      <div id="form_header_container">
-        <h2 id="form_header">Troy's Adventure <h2>
-      </div>
-      <div id="form_content_container">
-        <div id="form_content_inner_container">
-          <input type="text" name="navn" id="full_name" placeholder="Navn">
-          <input type="email" id="email" placeholder="E-mail">
-          <input type="password" name="password" id="password" placeholder="Password">
-        
-          <input type="text" name="" id="favorite_song" placeholder="Alder">
-          <input type="text" name="" id="something" placeholder="Klassetrin">
+    <div id="conetent_container">
+      <div id="form_container">
+        <div id="form_header_container">
+          <h2 id="form_header">Troy's Adventure</h2>
+        </div>
+        <div id="form_content_container">
+          <div id="form_content_inner_container">
+            <input type="text" name="navn" id="full_name" placeholder="Navn" />
+            <input type="email" id="email" placeholder="E-mail" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
 
-          <div id="button_container">
-            <button  type="submit"id="loginButton" onclick="register()">Logind</button>
-            <button type="submit"id="regiButton" onclick="register()" > Registrer  </button>
+            <input type="text" name="" id="favorite_song" placeholder="Alder" />
+            <input
+              type="text"
+              name=""
+              id="something"
+              placeholder="Klassetrin"
+            />
+
+            <div id="button_container">
+              <button type="submit" id="loginButton" onclick="register()">
+                Logind
+              </button>
+              <button type="submit" id="regiButton" onclick="register()">
+                Registrer
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-   </div>
-   
   </body>
-  
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
-  <script  src="login.js"></script>
+  <script src="login.js"></script>
 
-<script type="module" >
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-  //import { serverTimestamp } from 'firebase/firestore'
-  //import { getFirestore, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js'
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    //import { serverTimestamp } from 'firebase/firestore'
+    //import { getFirestore, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js'
 
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBZGXunX2rIzgq0MmOvcrdkT517-pMLCP4",
+      authDomain: "tekniprojekt.firebaseapp.com",
+      databaseURL:
+        "https://tekniprojekt-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "tekniprojekt",
+      storageBucket: "tekniprojekt.appspot.com",
+      messagingSenderId: "384005180840",
+      appId: "1:384005180840:web:650f921d606de9e837619d",
+    };
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBZGXunX2rIzgq0MmOvcrdkT517-pMLCP4",
-    authDomain: "tekniprojekt.firebaseapp.com",
-    databaseURL: "https://tekniprojekt-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "tekniprojekt",
-    storageBucket: "tekniprojekt.appspot.com",
-    messagingSenderId: "384005180840",
-    appId: "1:384005180840:web:650f921d606de9e837619d"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  
-</script>
-
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </html>

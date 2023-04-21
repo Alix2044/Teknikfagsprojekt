@@ -7,6 +7,19 @@
     <title>Document</title>
 
     <style>
+      button#formelsamling {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        border: 2px solid #0077be;
+        background-color: #0077be;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
       body {
         background-image: url("/assets/venusback.png");
         background-size: cover;
@@ -38,36 +51,30 @@
       math {
         display: block;
         border: 6px solid black;
-		width:max-content;
-		
+        width: max-content;
+
         font-size: 24px;
         line-height: 1;
         margin-top: 10%;
         margin-left: 1%;
-       padding: 1%;
-       
-       margin: 10% auto;
+        padding: 1%;
 
-       
+        margin: 10% auto;
       }
- 
+
       mfrac {
         display: inline-block;
         vertical-align: middle;
         font-size: larger;
-
-  
       }
 
-      mo  {
+      mo {
         display: inline-block;
         margin: 0 10px;
         vertical-align: middle;
         margin: 0 10px;
-
       }
 
-      
       input[type="number"] {
         width: 50px;
       }
@@ -77,9 +84,9 @@
         border-radius: 100px;
         background-color: #e44d26;
         position: absolute;
-        
+
         top: 20%;
-right:9%;
+        right: 9%;
         align-items: center;
       }
       .right-box h1 {
@@ -105,8 +112,6 @@ right:9%;
         font-size: large;
         align-items: center;
       }
-      
-      
     </style>
   </head>
   <body>
@@ -184,183 +189,171 @@ right:9%;
     </div>
 
     <div class=".mat">
-
-   
-    <math>
-        
-      <mfrac>
-        <mn>4</mn>
-        &#9135;
-        <mn>7</mn>
-      </mfrac>
-      <mo>&times;</mo>
-      <mfrac>
-        <mn>3</mn>
-        &#9135;
-        <mn>8</mn>
-      </mfrac>
-      <mo>=</mo>
-      <mfrac>
-        <mrow>
-            <mn><input type="number" name="" id="input1"></mn>
+      <math>
+        <mfrac>
+          <mn>4</mn>
+          &#9135;
+          <mn>7</mn>
+        </mfrac>
+        <mo>&times;</mo>
+        <mfrac>
+          <mn>3</mn>
+          &#9135;
+          <mn>8</mn>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mn><input type="number" name="" id="input1" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="input2"></mn>
-            
+            <mn><input type="number" name="" id="input2" /></mn>
           </mrow>
           &#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;
 
           <mrow>
-            <mn><input type="number" name="" id="input3"></mn>
+            <mn><input type="number" name="" id="input3" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="input4"></mn>
-            
+            <mn><input type="number" name="" id="input4" /></mn>
           </mrow>
- 
-      </mfrac>
-      
-<mo>=</mo>
+        </mfrac>
 
+        <mo>=</mo>
 
-<mfrac>
-    <mn><input type="number" name="" id="top1"><hr></mn>
-    <mn><input type="number" name="" id="bund1"></mn>
+        <mfrac>
+          <mn
+            ><input
+              type="number"
+              name=""
+              id="top1"
+            />&#9135;&#9135;&#9135;&#9135;&#9135;</mn
+          >
+          <mn><input type="number" name="" id="bund1" /></mn>
+        </mfrac>
+      </math>
+    </div>
 
-</mfrac>
-   
-     
-    </math>
-</div>
-
-  <div>
-    <button id="submit">Næste</button>
-  </div>
-
+    <div>
+      <button id="submit">Næste</button>
+    </div>
+    <a href="/Formelsamling/Formelsamling_forside.html"
+      ><button id="formelsamling">Formelsamling</button></a
+    >
   </body>
   <script>
     const input1 = document.getElementById("input1");
-      const input2 = document.getElementById("input2");
-      const input3 = document.getElementById("input3");
-      const input4 = document.getElementById("input4");
+    const input2 = document.getElementById("input2");
+    const input3 = document.getElementById("input3");
+    const input4 = document.getElementById("input4");
 
-      const restult1 = document.getElementById("result1");
-      const restult2 = document.getElementById("result2");
+    const restult1 = document.getElementById("result1");
+    const restult2 = document.getElementById("result2");
 
-     
+    // kan ændres til changes
+    input1.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-       // kan ændres til changes
-       input1.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 4) {
+        input1.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else {
+        input1.style.backgroundColor = "red";
+        console.log(input1.value);
+        console.log("kkkk");
+      }
+    });
 
-        if (inputValue === 4) {
-          input1.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else {
-          input1.style.backgroundColor = "red";
-          console.log(input1.value);
-          console.log("kkkk");
-        }
-      });
+    input2.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      input2.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 3) {
+        input2.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        input2.style.backgroundColor = "white";
+      } else {
+        input2.style.backgroundColor = "red";
 
-        if (inputValue === 3) {
-          input2.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          input2.style.backgroundColor = "white";
-        } else {
-          input2.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    input3.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      input3.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 7) {
+        input3.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        input3.style.backgroundColor = "white";
+      } else {
+        input3.style.backgroundColor = "red";
 
-        if (inputValue === 7) {
-          input3.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          input3.style.backgroundColor = "white";
-        } else {
-          input3.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    input4.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      input4.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 8) {
+        input4.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        input3.style.backgroundColor = "white";
+      } else {
+        input4.style.backgroundColor = "red";
 
-        if (inputValue === 8) {
-          input4.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          input3.style.backgroundColor = "white";
-        } else {
-          input4.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    top1.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      top1.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 12) {
+        top1.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        top1.style.backgroundColor = "white";
+      } else {
+        top1.style.backgroundColor = "red";
 
-        if (inputValue === 12) {
-          top1.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          top1.style.backgroundColor = "white";
-        } else {
-          top1.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    bund1.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      bund1.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 56) {
+        bund1.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        bund1.style.backgroundColor = "white";
+      } else {
+        bund1.style.backgroundColor = "red";
 
-        if (inputValue === 56) {
-          bund1.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {  
-          bund1.style.backgroundColor = "white";
-        } else {
-          bund1.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    var submitBtn = document.getElementById("submit");
 
-      var submitBtn = document.getElementById("submit");
+    var submitBtn = document.getElementById("submit");
 
-  
-
-      var submitBtn = document.getElementById("submit");
-
-submitBtn.addEventListener("click", () => {
-
-  if (
-    input1.value == "4" &&
-    input2.value == "3" &&
-    input3.value == "7" &&
-    input4.value == "8" &&
-
-
-    top1.value == "12" &&
-    bund1.value == "56" 
-    
-  
-  ) {
-    window.location.href = "/Planeter/venus/minusVenus.html"
-  } else {
-    alert("ikke færdig endnu");
-  }
-});
-</script>
+    submitBtn.addEventListener("click", () => {
+      if (
+        input1.value == "4" &&
+        input2.value == "3" &&
+        input3.value == "7" &&
+        input4.value == "8" &&
+        top1.value == "12" &&
+        bund1.value == "56"
+      ) {
+        window.location.href = "/Planeter/venus/divVenus.html";
+      } else {
+        alert("ikke færdig endnu");
+      }
+    });
+  </script>
 </html>
-

@@ -7,6 +7,18 @@
     <title>Document</title>
 
     <style>
+      button#formelsamling {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        border: 2px solid #0077be;
+        background-color: #0077be;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
       body {
         background-image: url("/assets/venusback.png");
         background-size: cover;
@@ -38,35 +50,28 @@
       math {
         display: block;
         border: 6px solid black;
-		width: 50%;
-		
+        width: 50%;
+
         font-size: 24px;
         line-height: 1;
         margin-top: 10%;
-      margin: 10% auto;
-       padding: 1%;
-       
-
-       
+        margin: 10% auto;
+        padding: 1%;
       }
- 
+
       mfrac {
         display: inline-block;
         vertical-align: middle;
         font-size: larger;
-
-  
       }
 
-      mo  {
+      mo {
         display: inline-block;
         margin: 0 10px;
         vertical-align: middle;
         margin: 0 10px;
-
       }
 
-      
       input[type="number"] {
         width: 50px;
       }
@@ -76,9 +81,9 @@
         border-radius: 100px;
         background-color: #e44d26;
         position: absolute;
-        
+
         top: 20%;
-right:9%;
+        right: 9%;
         align-items: center;
       }
       .right-box h1 {
@@ -104,8 +109,6 @@ right:9%;
         font-size: large;
         align-items: center;
       }
-      
-      
     </style>
   </head>
   <body>
@@ -183,77 +186,68 @@ right:9%;
     </div>
 
     <div class=".mat">
-
-   
-    <math>
-        
-      <mfrac>
-        <mn>1</mn>
-        &#9135;
-        <mn>5</mn>
-      </mfrac>
-      <mo>+</mo>
-      <mfrac>
-        <mn>4</mn>
-        &#9135;
-        <mn>7</mn>
-      </mfrac>
-      <mo>=</mo>
-      <mfrac>
-        <mrow>
-            <mn><input type="number" name="" id="VenInput1"></mn>
+      <math>
+        <mfrac>
+          <mn>1</mn>
+          &#9135;
+          <mn>5</mn>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mn>4</mn>
+          &#9135;
+          <mn>7</mn>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mn><input type="number" name="" id="VenInput1" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="VenInput2"></mn>
-            
+            <mn><input type="number" name="" id="VenInput2" /></mn>
           </mrow>
           &#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;
 
           <mrow>
-            <mn><input type="number" name="" id="VenInput3"></mn>
+            <mn><input type="number" name="" id="VenInput3" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="VenInput4"></mn>
-            
+            <mn><input type="number" name="" id="VenInput4" /></mn>
           </mrow>
- 
-      </mfrac>
-      <mo>+</mo>
-      <mfrac>
-  
-        <mrow>
-            <mn><input type="number" name="" id="input1"></mn>
+        </mfrac>
+        <mo>+</mo>
+        <mfrac>
+          <mrow>
+            <mn><input type="number" name="" id="input1" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="input2"></mn>
-            
+            <mn><input type="number" name="" id="input2" /></mn>
           </mrow>
           &#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;
 
           <mrow>
-            <mn><input type="number" name="" id="input3"></mn>
+            <mn><input type="number" name="" id="input3" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="input4"></mn>
-            
+            <mn><input type="number" name="" id="input4" /></mn>
           </mrow>
-      </mfrac>
-<mo>=</mo>
+        </mfrac>
+        <mo>=</mo>
 
-<mfrac>
-    <mn><input type="number" name="" id="input5"><hr></mn>
-    <mn><input type="number" name="" id="input6"></mn>
-
-</mfrac>
-
-
-   
-     
-    </math>
-</div>
-<div>
-  <button id="submit">Næste</button>
-</div>
+        <mfrac>
+          <mn
+            ><input type="number" name="" id="input5" />
+            &#9135;&#9135;&#9135;&#9135;&#9135;</mn
+          >
+          <mn><input type="number" name="" id="input6" /></mn>
+        </mfrac>
+      </math>
+    </div>
+    <div>
+      <button id="submit">Næste</button>
+    </div>
+    <a href="/Formelsamling/Formelsamling_forside.html"
+      ><button id="formelsamling">Formelsamling</button></a
+    >
   </body>
-</html>
-<script>
-  const input1 = document.getElementById("input1");
+  <script>
+    const input1 = document.getElementById("input1");
     const input2 = document.getElementById("input2");
     const input3 = document.getElementById("input3");
     const input4 = document.getElementById("input4");
@@ -263,21 +257,18 @@ right:9%;
     const input7 = document.getElementById("input7");
     const input8 = document.getElementById("input8");
 
-
     const VenInput1 = document.getElementById("VenInput1");
     const VenInput2 = document.getElementById("VenInput2");
     const VenInput3 = document.getElementById("VenInput3");
     const VenInput4 = document.getElementById("VenInput4");
 
-
     const resultat = document.getElementById("resultat");
-
 
     VenInput1.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
-      if (inputValue === 1 ) {
-        VenInput1 .style.backgroundColor = "green";
+      if (inputValue === 1) {
+        VenInput1.style.backgroundColor = "green";
         console.log("hhhh");
       } else {
         VenInput1.style.backgroundColor = "red";
@@ -324,12 +315,8 @@ right:9%;
       }
     });
 
-
-
-
-
-     // kan ændres til changes
-     input1.addEventListener("input", function () {
+    // kan ændres til changes
+    input1.addEventListener("input", function () {
       const inputValue = parseInt(this.value);
 
       if (inputValue === 4) {
@@ -416,42 +403,25 @@ right:9%;
       }
     });
 
-    
-
-    
-
-
-
     var submitBtn = document.getElementById("submit");
 
-submitBtn.addEventListener("click", () => {
-
-if (
-
-VenInput1.value == "1" &&
-VenInput2.value == "7" &&
-VenInput3.value == "5" &&
-VenInput4.value == "7" &&
-
-
-
-  input1.value == "4" &&
-  input2.value == "5" &&
-  input3.value == "7" &&
-  input4.value == "5" &&
-  input5.value == "27" &&
-  input6.value == "35" 
-  
-
- 
- 
-){
- window.location.href = "/Planeter/venus/gangeVenus.html"
-  
-}
-else {
-  alert("Ikke færdig endnu!");
-}
-});
-</script>
+    submitBtn.addEventListener("click", () => {
+      if (
+        VenInput1.value == "1" &&
+        VenInput2.value == "7" &&
+        VenInput3.value == "5" &&
+        VenInput4.value == "7" &&
+        input1.value == "4" &&
+        input2.value == "5" &&
+        input3.value == "7" &&
+        input4.value == "5" &&
+        input5.value == "27" &&
+        input6.value == "35"
+      ) {
+        window.location.href = "/Planeter/venus/minusVenus.html";
+      } else {
+        alert("Ikke færdig endnu!");
+      }
+    });
+  </script>
 </html>

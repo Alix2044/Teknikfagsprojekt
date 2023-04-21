@@ -12,14 +12,15 @@ body {
   background-size: cover;
 }
 
-#mars{
+#mars {
   margin-top: 5%;
   width: 50%;
   height: 100%;
   margin-left: 10%;
 }
 
-#mars, #astroImg {
+#mars,
+#astroImg {
   display: inline-block;
   vertical-align: middle;
 }
@@ -28,27 +29,25 @@ body {
   width: 20%;
   margin-left: 5%; /* adjust this value to add more or less space between the images */
 }
-#jorden{
+#jorden {
   width: 40%;
   height: 80%;
   margin-left: 500px;
-
 }
-#jordAstro{
+#jordAstro {
   width: 85%;
-  height:100%;
+  height: 100%;
 }
 
-#uranus,#saturn,#venus,#merkur{
+#uranus,
+#saturn,
+#venus,
+#merkur {
   width: 83%;
   height: 100%;
-
-
 }
-#neptun{
+#neptun {
   width: 83%;
   height: 100%;
-margin-top: 30px;
-
+  margin-top: 30px;
 }
-

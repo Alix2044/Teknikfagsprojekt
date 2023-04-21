@@ -7,28 +7,23 @@
     <title>Document</title>
 
     <style>
-        button#formelsamling {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px;
-  border: 2px solid #0077be;
-  background-color: #0077be;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
+      button#formelsamling {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        border: 2px solid #0077be;
+        background-color: #0077be;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
 
-button#formelsamling:hover {
-  background-color: #fff;
-  color: #0077be;
-}
-
-
-
-
-
+      button#formelsamling:hover {
+        background-color: #fff;
+        color: #0077be;
+      }
 
       body {
         background-image: url("/assets/venusback.png");
@@ -61,36 +56,30 @@ button#formelsamling:hover {
       math {
         display: block;
         border: 6px solid black;
-		width: max-content;
-   
-		
+        width: max-content;
+
         font-size: 24px;
         line-height: 1;
         margin-top: 10%;
         margin-left: 1%;
-       padding: 1%;
-       
-       margin: 10% auto;
-       
+        padding: 1%;
+
+        margin: 10% auto;
       }
- 
+
       mfrac {
         display: inline-block;
         vertical-align: middle;
         font-size: larger;
-
-  
       }
 
-      mo  {
+      mo {
         display: inline-block;
         margin: 0 10px;
         vertical-align: middle;
         margin: 0 10px;
-
       }
 
-      
       input[type="number"] {
         width: 50px;
       }
@@ -100,9 +89,9 @@ button#formelsamling:hover {
         border-radius: 100px;
         background-color: #e44d26;
         position: absolute;
-        
+
         top: 20%;
-right:9%;
+        right: 9%;
         align-items: center;
       }
       .right-box h1 {
@@ -128,8 +117,6 @@ right:9%;
         font-size: large;
         align-items: center;
       }
-      
-      
     </style>
   </head>
   <body>
@@ -207,191 +194,174 @@ right:9%;
     </div>
 
     <div class=".mat">
-
-   
-    <math>
-        
-      <mfrac>
-        <mn>1</mn>
-        &#9135;
-        <mn>5</mn>
-      </mfrac>
-      <mo>:</mo>
-      <mfrac>
-        <mn>4</mn>
-        &#9135;
-        <mn>7</mn>
-      </mfrac>
-      <mo>=</mo>
-      <mfrac>
-        <mrow>
-            <mn><input type="number" name="" id="input1"></mn>
+      <math>
+        <mfrac>
+          <mn>1</mn>
+          &#9135;
+          <mn>5</mn>
+        </mfrac>
+        <mo>:</mo>
+        <mfrac>
+          <mn>4</mn>
+          &#9135;
+          <mn>7</mn>
+        </mfrac>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mn><input type="number" name="" id="input1" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="input2"></mn>
-            
+            <mn><input type="number" name="" id="input2" /> </mn>
           </mrow>
           &#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;&#9135;
 
           <mrow>
-            <mn><input type="number" name="" id="input3"></mn>
+            <mn><input type="number" name="" id="input3" /></mn>
             <mo>&#xd7;</mo>
-            <mn><input type="number" name="" id="input4"></mn>
-            
+            <mn><input type="number" name="" id="input4" /></mn>
           </mrow>
- 
-      </mfrac>
-      <mo>&equals;</mo>
-  
+        </mfrac>
+        <mo>&equals;</mo>
 
-<mfrac>
-    <mn><input type="number" name="" id="result1"><hr></mn>
-    <mn><input type="number" name="" id="result2"></mn>
+        <mfrac>
+          <mn
+            ><input
+              type="number"
+              name=""
+              id="result1"
+            />&#9135;&#9135;&#9135;&#9135;&#9135;</mn
+          >
 
-</mfrac>
+          <mn><input type="number" name="" id="result2" /></mn>
+        </mfrac>
+      </math>
+    </div>
 
-   
-     
-    </math>
-</div>
+    <div>
+      <button id="submit">Næste</button>
+    </div>
 
-  <div>
-    <button id="submit">Næste</button>
-  </div>
-
-
-  <a href="/Formelsamling/Formelsamling_forside.html"><button id="formelsamling">Formelsamling</button></a> 
-
+    <a href="/Formelsamling/Formelsamling_forside.html"
+      ><button id="formelsamling">Formelsamling</button></a
+    >
   </body>
 
   <script>
-     const input1 = document.getElementById("input1");
-      const input2 = document.getElementById("input2");
-      const input3 = document.getElementById("input3");
-      const input4 = document.getElementById("input4");
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const input3 = document.getElementById("input3");
+    const input4 = document.getElementById("input4");
 
-      // resultat
+    // resultat
 
-     const top1 = document.getElementById("result1");
-      const bund1 = document.getElementById("result2");
+    const top1 = document.getElementById("result1");
+    const bund1 = document.getElementById("result2");
 
-      
+    // kan ændres til changes
+    input1.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      // kan ændres til changes
-      input1.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 1) {
+        input1.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else {
+        input1.style.backgroundColor = "red";
+        console.log(input1.value);
+        console.log("kkkk");
+      }
+    });
 
-        if (inputValue === 1 ) {
-          input1.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else {
-          input1.style.backgroundColor = "red";
-          console.log(input1.value);
-          console.log("kkkk");
-        }
-      });
+    input2.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      input2.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 7) {
+        input2.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        input2.style.backgroundColor = "white";
+      } else {
+        input2.style.backgroundColor = "red";
 
-        if (inputValue === 7) {
-          input2.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          input2.style.backgroundColor = "white";
-        } else {
-          input2.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    input3.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      input3.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 5) {
+        input3.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        input3.style.backgroundColor = "white";
+      } else {
+        input3.style.backgroundColor = "red";
 
-        if (inputValue === 5) {
-          input3.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          input3.style.backgroundColor = "white";
-        } else {
-          input3.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    input4.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      input4.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 4) {
+        input4.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        input3.style.backgroundColor = "white";
+      } else {
+        input4.style.backgroundColor = "red";
 
-        if (inputValue === 4) {
-          input4.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          input3.style.backgroundColor = "white";
-        } else {
-          input4.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    top1.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      top1.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 7) {
+        result1.style.backgroundColor = "green";
+        console.log("hhhh");
+      } else if (inputValue == "") {
+        result1.style.backgroundColor = "white";
+      } else {
+        result1.style.backgroundColor = "red";
 
-        if (inputValue === 7) {
-          result1.style.backgroundColor = "green";
-          console.log("hhhh");
-        } else if (inputValue == "") {
-          result1.style.backgroundColor = "white";
-        } else {
-          result1.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    bund1.addEventListener("input", function () {
+      const inputValue = parseInt(this.value);
 
-      bund1.addEventListener("input", function () {
-        const inputValue = parseInt(this.value);
+      if (inputValue === 20) {
+        result2.style.backgroundColor = "green";
+      } else if (inputValue == "") {
+        result2.style.backgroundColor = "white";
+      } else {
+        result2.style.backgroundColor = "red";
 
-        if (inputValue === 20) {
-          result2.style.backgroundColor = "green";
-      
-        } else if (inputValue == "") {  
-          result2.style.backgroundColor = "white";
-        } else {
-          result2.style.backgroundColor = "red";
+        console.log("kkkk");
+      }
+    });
 
-          console.log("kkkk");
-        }
-      });
+    var submitBtn = document.getElementById("submit");
 
-      var submitBtn = document.getElementById("submit");
+    var submitBtn = document.getElementById("submit");
 
-
-
-      var submitBtn = document.getElementById("submit");
-
-submitBtn.addEventListener("click", () => {
- 
-  if (
-    input1.value == "1" &&
-    input2.value == "7" &&
-    input3.value == "5" &&
-    input4.value == "4" &&
-
-
-    top1.value == "7" &&
-  bund1.value == "20" 
-    
-    
-  ) {
-   window.location.href = "/Planeter/venus/VenusWin.html"
-
-  } else {
-    alert("ikke færdig endnu");
-  }
-});
-
+    submitBtn.addEventListener("click", () => {
+      if (
+        input1.value == "1" &&
+        input2.value == "7" &&
+        input3.value == "5" &&
+        input4.value == "4" &&
+        top1.value == "7" &&
+        bund1.value == "20"
+      ) {
+        window.location.href = "/Planeter/venus/VenusWin.html";
+      } else {
+        alert("ikke færdig endnu");
+      }
+    });
   </script>
- 
 </html>
