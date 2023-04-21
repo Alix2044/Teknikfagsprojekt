@@ -61,6 +61,7 @@
       console.log(user_data)
 
       database_ref.child("users/" + user.uid).set(user_data)
+      window.location.href = "/indexVel.html"
 
     }).catch(function(){
     var errorCode = error.code
