@@ -40,97 +40,122 @@ function register() {
     return;
   }
 
-  auth
-    .createUserWithEmailAndPassword(email, password)
-    .then(function () {
-      console.log("User created!");
+  // funktion som bliver kørt, da brugeren har klikket på registrer knappen
+  function register() {
+    // Hent inputværdierne
+    email = document.getElementById("email").value;
+    password = document.getElementById("password").value;
+    full_name = document.getElementById("full_name").value;
 
-      let user = auth.currentUser;
+    // Tjek om de gyldige
+    if (
+      validate_email(email) == false ||
+      validate_pw(password) == false ||
+      validate_fields(full_name) == false
+    ) {
+      alert("Fejl i email eller adgangskode.Prøv igen");
+      return;
+    }
 
-      var database_ref = database.ref();
-      //  var sec = new TimeStamp(firebase.database.ServerValue.TIMESTAMP).toDate()
-      let user_data = {
-        email: user.email,
-        password: password,
-        full_name: full_name,
-        created_at: firebase.database.ServerValue.TIMESTAMP,
-        updated_at: firebase.database.ServerValue.TIMESTAMP,
-        last_login: firebase.database.ServerValue.TIMESTAMP,
-      };
-      console.log(user_data);
+    // De er gyldige; brugeren bliver oprettet i databasen
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(function () {
+        console.log("User created!");
+        // Hent brugeren oplysninger, som er logget ind
+        let user = auth.currentUser;
+        // reference til databasen
+        var database_ref = database.ref();
 
-      database_ref.child("users/" + user.uid).set(user_data);
-      window.location.href = "/indexVel.html";
-    })
-    .catch(function () {
-      var errorCode = error.code;
-      var errorMessage = error.message;
+        //Nødvendige oplysninger på brugeren
+        let user_data = {
+          email: user.email,
+          password: password,
+          full_name: full_name,
+          created_at: firebase.database.ServerValue.TIMESTAMP,
+          updated_at: firebase.database.ServerValue.TIMESTAMP,
+          last_login: firebase.database.ServerValue.TIMESTAMP,
+        };
+        console.log(user_data);
+        // Opdaterer brugerens oplysninger i databasen
+        database_ref.child("users/" + user.uid).set(user_data);
+        window.location.href = "/indexVel.html";
+      })
+      // Tjekker om fejl i oprettelsen
+      .catch(function () {
+        var errorCode = error.code;
+        var errorMessage = error.message;
 
-      alert(errorMessage);
-    });
-}
-
-// Get a reference to the "users" node in the database
-const usersRef = database.ref("users");
-
-// Attach an event listener to the "value" event to listen for changes in the data
-usersRef.on("value", function (snapshot) {
-  // Get the data from the snapshot
-  const data = snapshot.val();
-
-  // Loop through each user in the data
-  for (const userId in data) {
-    const user = data[userId];
-
-    // Log the user data to the console
-    console.log(user.email, user.full_name, user.created_at);
-  }
-});
-
-firebase.auth().onAuthStateChanged(function (user) {
-  if (user) {
-    // User is signed in, get the UID
-    var uid = user.uid;
-    // Retrieve the user's information from the Realtime Database using the UID
-    firebase
-      .database()
-      .ref("users/" + uid)
-      .once("value")
-      .then(function (snapshot) {
-        var userInformation = snapshot.val();
-        // Do something with the user's information
-        console.log(userInformation);
-        localStorage.setItem(
-          "full_name",
-          JSON.stringify(userInformation.full_name)
-        );
+        alert(errorMessage);
       });
-  } else {
-    // User is signed out
   }
-});
 
-function validate_email(email) {
-  let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  // Refererer til users node i databasen
+  const usersRef = database.ref("users");
 
-  if (regex.test(email)) {
-    return true;
-  } else {
-    return false;
+  // Tilføjer en eventlistener således når værdien ændrer sig bliver funktion kørt
+  usersRef.on("value", function (snapshot) {
+    // Tager et snapshot af databasen
+    const data = snapshot.val();
+
+    // Loop igennem databasen
+    for (const userId in data) {
+      const user = data[userId];
+
+      // Vis det i consolen
+      console.log(user.email, user.full_name, user.created_at);
+    }
+  });
+
+  // Tjekker om brugeren er logget ind ?
+
+  firebase.auth().onAuthStateChanged(function (user) {
+    // Brugeren er logget ind
+    if (user) {
+      // Hent brugeren uid
+      var uid = user.uid;
+      // Søger efter brugerens oplysninger og tager et snapshot af værdien
+      firebase
+        .database()
+        .ref("users/" + uid)
+        .once("value")
+        .then(function (snapshot) {
+          var userInformation = snapshot.val();
+          // Gemmer brugeren fuldenavn i localstorage
+          console.log(userInformation);
+          localStorage.setItem(
+            "full_name",
+            JSON.stringify(userInformation.full_name)
+          );
+        });
+    } else {
+      // Brugeren er ikke logget ind
+      console.log("Ikke logget ind ");
+    }
+  });
+
+  function validate_email(email) {
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (regex.test(email)) {
+      return true;
+    } else {
+      return false;
+    }
   }
-}
-function validate_pw(password) {
-  if (password.length > 6) {
-    return true;
-  } else {
-    return false;
+  function validate_pw(password) {
+    if (password.length > 6) {
+      return true;
+    } else {
+      return false;
+    }
   }
-}
 
-function validate_fields(field) {
-  if (field.length > 0) {
-    return true;
-  } else {
-    return false;
+  function validate_fields(field) {
+    if (field.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
